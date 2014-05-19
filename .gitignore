@@ -1,0 +1,3 @@
+*.pyc
+.DS_Store
+fps_test_results.txt
