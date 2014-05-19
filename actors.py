@@ -22,13 +22,13 @@ class Ball(Actor):
     def __init__(self, x=10, y=1):
         x = randint(0, 100)
         y = randint(0, 50)
-        self.renders = [Render(curses.ACS_CKBOARD, y, x)]
+        self.renders = [Render(ord('o'), y, x)]
         self.last_moved = time()
     def oscillate(self):
-        if self.renders[0].sym == curses.ACS_CKBOARD:
+        if self.renders[0].sym == ord('o'):
             self.renders[0].sym = ord('O')
         else:
-            self.renders[0].sym = curses.ACS_CKBOARD
+            self.renders[0].sym = ord('o')
     def update(self):
         rand = random()
         if self.last_moved + random() < time():
@@ -47,4 +47,4 @@ class Render(object):
     def __init__(self, sym, y, x):
         self.x = x
         self.y = y
-        self.sym = sy
+        self.sym = sym

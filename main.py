@@ -46,7 +46,7 @@ if __name__ == "__main__":
     renderer = Renderer()
     t = handle_input(None, renderer.screen)
     drawable = []
-    # state.active_things = [actors.Ball() for x in range(100)]
+    state.active_things = [actors.Ball() for x in range(100)]
     try:
         while updates < 1000:
             current = time()
